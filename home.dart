@@ -6,6 +6,8 @@ void main(){
   } else {
     print("umur anda tidak cukup");
   }
-
-  
+/*
+ *ini hanyalah sebuah test 
+ * 
+ */
 }
