@@ -1,94 +1,12 @@
-import 'dart:async';
-import 'dart:io';
-
 // buat tugas2.dart dan commit nanti di git silahkan di kerjakan
 // buat fungsi program print nama depan,nama belakang,
 // buat fungsi tentang bunga uang. Formula= (p * t * r) / 100
 // buat fungsi tentang pangkat dari angka
 // buatf fungsi tukar angka di tiap variable contoh a = 10, b = 15 nilai keduanya ditukar
 
-// p = Priciple = Pokok/modal
-// T = Time = Jangka waktu dalam tahun
-// R = Rate = Tingkat bunga
-
-// contoh Kasus:
-// Seseorang meminjam uang sebesar Rp300.000,- selama 3 tahun dengan suku bunga 15 % pertahun.
-//Berapakah jumlah bunga yang dibayar selama jangka waktu 3 tahun tersebut dan total 
-//pembayaran atas hutang tersebut?
-
-void printNama(var depan, var belakang){
-  print("Nama depan : ${depan}\nNama belakang : ${belakang}");
-  print("\nPerkenalkan,\nNama saya ${depan} ${belakang}");
-}
-
-
-int bungaUang(int modal, int LamaTahun, int sukuBunga){
-  int hasil = 0;
-  hasil = (modal * LamaTahun * sukuBunga) ~/ 100;
-  return hasil;
-}
-
-int? pangkatAngka(int masukkanAngka, int angkaPangkat){
-  int hasil = 1;
-  for(int i = 1; i <= angkaPangkat; i++){
-    hasil *= masukkanAngka;
-  }
-  return hasil;
-}
-
-tukarAngka(int angkaPertama, int angkaKedua){
-  List<int>? hasil = null;
-  if(angkaPertama != angkaKedua){
-    int buffer;
-    buffer = angkaPertama;
-    angkaPertama =angkaKedua;
-    angkaKedua = buffer;
-    
-  }
-  return hasil = [angkaPertama, angkaKedua];
-}
+import 'latihan1.dart';
 
 void main(){
-  // Nama depan Dan Nama Belakang
-  print("\n==========NAMA=========");
-  String namaDepan = "Sunarto";
-  String namaBelakang = "Utina";
-  printNama(namaDepan, namaBelakang);
-  print("=======================");
-
-  // Suku bunga
-  print("\n===HITUNG SUKU BUNGA===");
-  int modalUang = 500000;
-  int LamaTahun = 2;
-  int sukuBunga = 15;
-  int totalBunga = bungaUang(modalUang, LamaTahun, sukuBunga);
-  int totalKesluruhan = modalUang + totalBunga;
-  print("Pinjaman ${modalUang}, lama tahun ${LamaTahun}, suku bunga ${sukuBunga}%");
-  print("Total bunga yang harus dibayar ${totalBunga}");
-  print("Uang yang harus dibayar ${totalKesluruhan}");
-  print("=======================");
-
-  // Pangkat
-  print("\n=====PERPANGKATAN======");
-  int masukkanAngka = 10;
-  int masukkanPangkat = 3;
-  int? hasil = pangkatAngka(masukkanAngka, masukkanPangkat);
-  print("Hasil dari ${masukkanAngka} pangkat ${masukkanPangkat} = ${hasil}");
-  print("=======================");
-
-  
-  // Tukar angka
-  print("\n======TUKAR ANGKA======");
-  var a = 10;
-  var b = 3;
-  print("Sebelum ditukar,\nangka pertama = ${a}\nangka kedua = ${b}");
-  var hasilTukarAngka = tukarAngka(a, b);
-  var c = hasilTukarAngka[0];
-  var d = hasilTukarAngka[1];
-  print("\nSetelah ditukar,\nangka pertama = ${c}\nangka kedua = ${d}");
-  print("=======================");
-
-  print("\n=======EXERCISE=======");
   print("Exercise 50: ${exercise50()}");
   print("Exercise 51: ${exercise51()}");
   print("Exercise 52: ${exercise52()}");
